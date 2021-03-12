@@ -85,7 +85,30 @@ lfe> (Elixir.Nx:divide
    names (nil nil) shape #(2 2) type #(f 32))
 ```
 
-For now, doing anything beyond straight-up function calls in Nx is not possible: LFE can't currently utilise Elixir macros (generally true for other BEAM languages, too ... macros tend to be language implementation specific).
+For this next part, we'll use operators that override those of LFE for use in Nx. From another project:
+
+``` lisp
+(include-lib "lfe-nx/include/nx.lfe")
+```
+
+From inside the LFE nx project:
+
+``` lisp
+(include-lib "include/nx.lfe")
+```
+``` lisp
+(defun softmax (t)
+  (/ (nx:exp t)
+     (nx:sum (nx:exp t))))
+```
+``` lisp
+#M(__struct__ Elixir.Nx.Tensor
+   data
+     #M(__struct__ Elixir.Nx.BinaryBackend
+        state
+          #B(226 79 3 61 185 120 178 61 105 145 114 62 144 215 36 63))
+   names (nil nil) shape #(2 2) type #(f 32))
+```
 
 ## License [&#x219F;](#table-of-contents)
 
