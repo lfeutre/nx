@@ -1,10 +1,11 @@
 {application, 'lfe-nx',
- [{description, "An LFE library"},
-  {vsn, git},
+ [{description, "LFE support for Elixir Nx"},
+  {vsn, "0.0.0"},
   {registered, []},
   {applications,
    [kernel,
-    stdlib
+    stdlib,
+    'Elixir.Nx'
    ]},
   {env,[]},
   {modules, []},

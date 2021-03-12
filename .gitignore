@@ -1,19 +1,36 @@
-.rebar3
-_*
+# MacOS
+.DS_Store
+
+# Erlang
 .eunit
 *.o
 *.beam
 *.plt
-*.swp
-*.swo
-.erlang.cookie
-ebin
-log
 erl_crash.dump
+.concrete/DEV_MODE
+
+# rebar 2.x
 .rebar
-logs
-_build
-.idea
-*.iml
+rel/example_project
+ebin/*.beam
+deps
+
+# rebar 3
+.rebar3
+_build/
+_checkouts/
+rebar.lock
+.rebar
+rebar/*
+.rebar/*
 rebar3.crashdump
+
+# Emacs
 *~
+\#*\#
+.\#*
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp

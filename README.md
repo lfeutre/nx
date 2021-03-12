@@ -16,11 +16,15 @@
 
 ## About [&#x219F;](#table-of-contents)
 
-TBD
+This project aims to allow using the Elixir Nx machine learning library from LFE.
 
 ## Build [&#x219F;](#table-of-contents)
 
 You will need to have Erlang, Elixir, and rebar3 installed on your system, in your `PATH`.
+
+``` shell
+$ mix local.hex --force
+```
 
 ```shell
 $ rebar3 compile
@@ -69,8 +73,8 @@ Continuing from the Nx README:
 
 ``` lisp
 lfe> (Elixir.Nx:divide
-lfe>   (Elixir.Nx:exp tensor)
-lfe>   (Elixir.Nx:sum (Elixir.Nx:exp tensor)))
+       (Elixir.Nx:exp tensor)
+       (Elixir.Nx:sum (Elixir.Nx:exp tensor)))
 ```
 ``` lisp
 #M(__struct__ Elixir.Nx.Tensor
