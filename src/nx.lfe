@@ -3,8 +3,15 @@
 
 (include-lib "include/nx.lfe")
 
+;;; --------------
+;;; optimisations
+;;; --------------
+
+(defun jit (func args)
+  (Elixir.Nx.Defn:jit func args))
+
 ;;; -----------
-;;; library API
+;;; operations
 ;;; -----------
 
 (defun divide (a b)

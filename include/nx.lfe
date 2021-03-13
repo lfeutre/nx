@@ -1,5 +1,5 @@
 (defmacro / args
-  `(Elixir.Nx:divide ,@args))
+  `(nx:jit ,#'Elixir.Nx:divide/2 ,args))
 
 ;; Notes from chatting with José:
 ;; * @Duncan McGreggor so today we already have something like
